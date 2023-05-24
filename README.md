@@ -19,14 +19,14 @@ Custom annotations can be used for various purposes, such as defining applicatio
 
 ## Eg.01
 ## Code:
-import java.lang.annotation.*;
+##### import java.lang.annotation.*;
 
-// Define a custom annotation
-@Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.METHOD)
-public @interface CustomAnnotation {
-    String value() default ""; // Define an element within the annotation
-}
+##### // Define a custom annotation
+##### @Retention(RetentionPolicy.RUNTIME)
+##### @Target(ElementType.METHOD)
+##### public @interface CustomAnnotation {
+#####     String value() default ""; // Define an element within the annotation
+##### }
 ## Explaination
 In the above code:
 
@@ -38,28 +38,28 @@ In the above code:
 ## Eg.02
 Once you've defined the custom annotation, you can use it in your code. Here's an example of how you can apply the custom annotation to a method:
 ## Code:
-public class MyClass {
-    @CustomAnnotation("Hello, Custom Annotation!")
-    public void myMethod() {
-        // Method implementation
-    }
-}
+##### public class MyClass {
+#####     @CustomAnnotation("Hello, Custom Annotation!")
+#####     public void myMethod() {
+#####         // Method implementation
+#####     }
+##### }
 ## Explaination:
 In the above code, the myMethod() is annotated with @CustomAnnotation, and the element value is set to the string "Hello, Custom Annotation!".
 
 ## Eg.03
 To access and process the custom annotation at runtime, you can use reflection. Here's an example of how you can retrieve the annotation value from the annotated method:
 ## Code:
-import java.lang.reflect.*;
+##### import java.lang.reflect.*;
 
-public class Main {
-    public static void main(String[] args) throws NoSuchMethodException {
-        Method method = MyClass.class.getMethod("myMethod");
-        CustomAnnotation annotation = method.getAnnotation(CustomAnnotation.class);
-        String value = annotation.value();
-        System.out.println(value);
-    }
-}
+##### public class Main {
+#####     public static void main(String[] args) throws NoSuchMethodException {
+#####         Method method = MyClass.class.getMethod("myMethod");
+#####         CustomAnnotation annotation = method.getAnnotation(CustomAnnotation.class);
+#####         String value = annotation.value();
+#####         System.out.println(value);
+#####     }
+##### }
 ## Explaination:
 In the above code, we obtain the Method object for the myMethod() method using reflection. Then, we use the getAnnotation() method to retrieve the CustomAnnotation instance from the method. Finally, we can access the value of the annotation using the value() method.
 
