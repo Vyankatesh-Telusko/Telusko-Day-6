@@ -1,6 +1,11 @@
 # Telusko-Day-6
 Annotations
 
+# Output of AnnotationExample.java
+![image](https://github.com/Vyankatesh-Telusko/Telusko-Day-6/assets/134121798/26033402-3814-4dc9-9b7d-3a524f647632)
+
+
+# Study
 
 In Java, annotations are a form of metadata that provide additional information about elements in your code, such as classes, methods, fields, or parameters. They can be used by the compiler, runtime, or other tools to process or analyze the annotated code. Annotations are marked using the @ symbol followed by the annotation name.
 
