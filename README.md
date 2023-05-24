@@ -18,6 +18,7 @@ In addition to these, Java also provides other annotations for purposes such as 
 Custom annotations can be used for various purposes, such as defining application-specific metadata, enabling configuration options, or providing instructions for code generation tools. They can be accessed and processed at runtime using reflection or used by other tools for static analysis, documentation generation, or code generation.
 
 ## Eg.01
+## Code:
 import java.lang.annotation.*;
 
 // Define a custom annotation
@@ -26,7 +27,7 @@ import java.lang.annotation.*;
 public @interface CustomAnnotation {
     String value() default ""; // Define an element within the annotation
 }
-
+## Explaination
 In the above code:
 
 * The @Retention annotation specifies that the custom annotation should be retained at runtime, allowing it to be accessed and processed using reflection.
@@ -36,17 +37,19 @@ In the above code:
 
 ## Eg.02
 Once you've defined the custom annotation, you can use it in your code. Here's an example of how you can apply the custom annotation to a method:
+## Code:
 public class MyClass {
     @CustomAnnotation("Hello, Custom Annotation!")
     public void myMethod() {
         // Method implementation
     }
 }
-
+## Explaination:
 In the above code, the myMethod() is annotated with @CustomAnnotation, and the element value is set to the string "Hello, Custom Annotation!".
 
 ## Eg.03
 To access and process the custom annotation at runtime, you can use reflection. Here's an example of how you can retrieve the annotation value from the annotated method:
+## Code:
 import java.lang.reflect.*;
 
 public class Main {
@@ -57,7 +60,7 @@ public class Main {
         System.out.println(value);
     }
 }
-
+## Explaination:
 In the above code, we obtain the Method object for the myMethod() method using reflection. Then, we use the getAnnotation() method to retrieve the CustomAnnotation instance from the method. Finally, we can access the value of the annotation using the value() method.
 
 Keep in mind that custom annotations in Java can be used for various purposes, and their behavior depends on how you process or interpret them in your code or tools.
