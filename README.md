@@ -2,8 +2,8 @@
 Annotations
 
 # Output of AnnotationExample.java
-![image](https://github.com/Vyankatesh-Telusko/Telusko-Day-6/assets/134121798/26033402-3814-4dc9-9b7d-3a524f647632)
 
+![1](https://github.com/Vyankatesh-Telusko/Telusko-Day-6/assets/134121798/393a748e-c3d9-4ab2-8602-a665ebeedd0f)
 
 # Study
 
